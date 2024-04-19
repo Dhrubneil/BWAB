@@ -1,0 +1,373 @@
+.navbar {
+  padding: 0.5rem 2rem;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; */
+  display: grid;
+
+  grid-template-columns: 25% 1% 60% 10%;
+  gap: 1%;
+  box-shadow: 1px 2px 5px #a09e9e;
+  transition: 0.3s linear;
+}
+
+.navbar:hover {
+  /* box-shadow: 1px 3px 5px rgb(20, 175, 236); */
+  box-shadow: 1px 3px 5px #a09e9e;
+}
+
+.v-navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  /* justify-self: start; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.logo-header {
+  z-index: 10;
+}
+
+.white-layer {
+  height: 100px;
+  min-width: 200%;
+  background: white;
+  z-index: 5;
+  transform: translateX(-100%);
+}
+
+.logo-name {
+  /* margin-left: 4px; */
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-1000%);
+  transition: 0.3s linear;
+  z-index: 1;
+  text-decoration: none;
+  /* animation: slide-right 0.3s linear 0.1s forwards; */
+  width: max-content;
+}
+
+.logo-name-sm {
+  text-align: left;
+  width: 205%;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-1000%);
+  }
+  to {
+    transform: translateX(-650%);
+  }
+}
+
+.pipe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.v-line {
+  background: black;
+  width: 3px;
+  height: 35px;
+  animation: pipe-amimation 1s linear forwards;
+}
+
+@keyframes pipe-animation {
+  0% {
+    background: black;
+  }
+  50% {
+    background: #14afec;
+  }
+  100% {
+    background: black;
+  }
+}
+/* .logo-header {
+  padding: 0rem 1rem;
+} */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-grow: 0.25; */
+}
+.v-nav-links {
+  /* max-height: 0vh; */
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: 100%; */
+  background: #1b1b1b;
+  animation: v-nav-slide 2s linear forwards;
+}
+
+@keyframes v-nav-slide {
+  from {
+    max-height: 0px;
+  }
+  to {
+    max-height: 2622px;
+  }
+}
+
+.nav-link {
+  /* padding: 0rem 0.25rem; */
+  /* border-bottom: 2px solid white; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  color: rgb(83, 80, 80);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s linear;
+  width: 100%;
+}
+.nav-link p {
+  text-align: center;
+}
+
+.v-nav-link-text {
+  display: flex;
+  align-items: left;
+  margin-left: 1rem;
+}
+
+.nav-link:hover {
+  color: rgb(20, 175, 236);
+
+  transition: 0.3s linear;
+}
+.nav-link-under {
+  display: flex;
+  margin: auto;
+  max-width: 0%;
+  height: 3px;
+  color: rgb(20, 175, 236);
+}
+
+.active-nav-link {
+  color: rgb(20, 175, 236);
+  scale: 1.0125;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s linear;
+  width: 100%;
+}
+.active-bar {
+  max-width: 80%;
+  background: rgb(20, 175, 236);
+
+  /* align-self: center; */
+}
+
+@keyframes nav-link-animation {
+  from {
+    max-width: 0%;
+    background: rgb(20, 175, 236);
+  }
+  to {
+    max-width: 80%;
+    background: rgb(20, 175, 236);
+  }
+}
+
+.menu {
+  padding: 0.25rem;
+  height: 45%;
+  width: 30%;
+  box-sizing: border-box;
+  border: 2px solid rgb(83, 80, 80);
+  border-radius: 0.25rem;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.h-line {
+  width: 100%;
+  height: 1.5px;
+  background: rgb(83, 80, 80);
+}
+
+.hide {
+  display: none;
+}
+
+.nav_links_icons {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.nav_link_icon {
+  /* height: 2rem;
+  width: 2rem; */
+  /* padding: 0.5rem; */
+  /* border-radius: 50%; */
+  /* display: none; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_link_icon small {
+  font-size: 0.65rem;
+}
+
+@media (max-width: 370px) {
+  .logo-header {
+    font-size: 1.5rem;
+  }
+  .logo-name-sm {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 0.5rem 2rem;
+    /* display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; */
+    display: grid;
+
+    grid-template-columns: 25% 1% 60% 10%;
+    gap: 1%;
+  }
+  .logo-header {
+    font-size: 1.75rem;
+    /* font-weight: 400; */
+  }
+
+  .logo-name {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-700%);
+    transition: 0.3s linear;
+    z-index: 1;
+    width: max-content;
+  }
+
+  /* .logo:hover .logo-name {
+    transform: translateX(100%);
+  } */
+
+  .nav-links {
+    font-size: 0.9em;
+  }
+
+  /* .pipe {
+    display: none;
+  } */
+}
+
+/* @media (max-width: 950px) {
+  .navbar {
+    grid-template-columns: 15% 60%;
+    gap: 2%;
+  }
+  .logo-name {
+    display: none;
+  }
+} */
+
+@media (max-width: 880px) {
+  .navbar {
+    grid-template-columns: 27% 1% 65% 10%;
+    gap: 1%;
+  }
+  .nav_links_icons {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav_link_icon {
+    /* height: 2rem;
+  width: 2rem; */
+    /* padding: 0.5rem; */
+    /* border-radius: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    grid-template-columns: 80% 15%;
+    gap: 5%;
+  }
+  .nav-links {
+    display: none;
+  }
+  .hide {
+    display: flex;
+  }
+  .logo-name {
+    display: flex;
+    transform: translateX(-300%);
+    font-size: 1rem;
+  }
+
+  .menu {
+    height: 38px;
+    width: 42.22px;
+    justify-self: flex-end;
+    margin-right: 0.5rem;
+  }
+}
+
+.nav-link:hover .nav-link-under {
+  animation: nav-link-animation 0.3s linear forwards;
+}
+
+.v-nav-links.nav-link:hover {
+  background: rgb(20, 175, 236);
+  transition: 0.3s linear;
+}
+
+.navlink_full {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav_link_under {
+  display: flex;
+  margin: auto;
+  max-width: 0%;
+  height: 3px;
+  background: rgb(20, 175, 236);
+}
+.nav_link_under_active {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  height: 3px;
+  background: rgb(20, 175, 236);
+}
+
+@media (min-width: 1101px) {
+  .logo:hover .logo-name {
+    animation: slide-right 0.5s linear 0.1s forwards;
+  }
+}

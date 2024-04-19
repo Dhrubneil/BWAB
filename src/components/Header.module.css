@@ -1,0 +1,110 @@
+.navLogo {
+  /* justify-self: start; */
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: rgb(83, 80, 80);
+}
+.active_icon {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(20, 175, 236);
+  border: 2px solid rgb(20, 175, 236);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s linear;
+  width: 100%;
+}
+.active {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(20, 175, 236);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s linear;
+  width: 100%;
+}
+
+.general {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navlink {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0rem 0.25rem; */
+  /* border-bottom: 2px solid white; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  text-decoration: none;
+  color: rgb(83, 80, 80);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s linear;
+  width: 100%;
+}
+.navlink p {
+  text-align: center;
+}
+
+.v-navlink-text {
+  display: flex;
+  align-items: left;
+  margin-left: 1rem;
+}
+
+.navlink:hover {
+  color: rgb(20, 175, 236);
+
+  transition: 0.3s linear;
+}
+/* .nav_link_under {
+  display: flex;
+  margin: auto;
+  max-width: 0%;
+  height: 3px;
+  color: rgb(20, 175, 236);
+  animation: nav_link_animation 0.3s linear forwards;
+} */
+
+.nav_link_under {
+  display: flex;
+  margin: auto;
+  max-width: 80%;
+  height: 3px;
+  background: rgb(20, 175, 236);
+}
+.nav_link_under_active {
+  display: flex;
+  margin: auto;
+  min-width: 80%;
+  height: 3px;
+  background: rgb(20, 175, 236);
+}
+@keyframes nav_link_animation {
+  from {
+    max-width: 0%;
+    background: rgb(20, 175, 236);
+  }
+  to {
+    max-width: 80%;
+    background: rgb(20, 175, 236);
+  }
+}
+
+.navlink:hover .nav_link_under {
+  animation: nav_link_animation 0.3s linear forwards;
+  /* max-width: 80%;
+  transition: 0.3s linear; */
+}
